@@ -13,7 +13,7 @@
 			<header style="padding-top:0px">
 				<a href="/"><img src="/img/photo.png" style="width:58px; float:left;padding:5px; padding-top:6px"/></a>
 				<h1 class="home"><a href="/">Thomas Sampson</a></h1>
-				<ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li><li class="nav-item"><a href="/about/">About</a></li><li class="nav-item"><a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>GitHub</a></li>
+				<ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li><li class="nav-item"><a href="/utils/">Utils</a></li><li class="nav-item"><a href="/about/">About</a></li><li class="nav-item"><a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>GitHub</a></li>
 					<li class="nav-item"><a href="https://gist.github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Gists</a></li>
 					<li class="nav-item"><a href="https://www.icloud.com/sharedalbum/#B0dGY8gBYtcown4" target="blank"><img src="/img/photos-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Photography</a></li>
 				</ul>
@@ -23,10 +23,11 @@
 				<h1>Interview Question - The Dead Particle</h1>
 <br/>
 <h2 id="overview">Overview <a class="direct-link" href="#overview" aria-hidden="true">#</a></h2>
-<p>Imagine you are implementing a particle system for your game. For performance reasons you would like your update and render loops to operate on one contiguous array of <em>live</em> particles. The particles updates are completely independent so update order is not a problem.</p>
-<p>During the previous frame update, you marked a particle in the middle of your array as dead.</p>
+<p>Imagine you are implementing a particle system for your game. For performance reasons you would like your update and render loops to operate on one contiguous array of <em>live</em> particles. The particles updates are completely independent so update order is not a problem. During the previous frame update, you marked a particle in the middle of your array as dead.<br>
+ </p>
 <h2 id="example">Example <a class="direct-link" href="#example" aria-hidden="true">#</a></h2>
 <pre class="language-javascript"><code class="language-javascript"><span class="highlight-line">Particles<span class="token punctuation">:</span> <span class="token constant">P0</span><span class="token punctuation">,</span> <span class="token constant">P1</span><span class="token punctuation">,</span> <span class="token constant">P2</span> <span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">,</span> <span class="token constant">P150000</span> <span class="token punctuation">,</span> <span class="token operator">...</span> <span class="token punctuation">,</span> <span class="token constant">P999999</span><span class="token punctuation">,</span> <span class="token constant">P1000000</span></span><br><span class="highlight-line">                         ↑                              </span><br><span class="highlight-line">                     ☠ <span class="token constant">DEAD</span> ☠                            </span></code></pre>
+<p> </p>
 <h2 id="question">Question <a class="direct-link" href="#question" aria-hidden="true">#</a></h2>
 <p>Describe an efficient method for removing the dead particle whilst preserving the contiguous array for the next update.</p>
 

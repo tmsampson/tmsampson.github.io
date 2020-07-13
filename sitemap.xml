@@ -47,12 +47,27 @@
   </url>
   
   <url>
-    <loc>https://drummertom999.bitbucket.io/tags/interview/</loc>
+    <loc>https://drummertom999.bitbucket.io/tags/nodejs/</loc>
     <lastmod>2020-07-13</lastmod>
   </url>
   
   <url>
     <loc>https://drummertom999.bitbucket.io/about/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drummertom999.bitbucket.io/utils/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drummertom999.bitbucket.io/utils/img-swizzle/</loc>
+    <lastmod>2020-07-13</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drummertom999.bitbucket.io/secret/</loc>
     <lastmod>2020-07-13</lastmod>
   </url>
 </urlset>

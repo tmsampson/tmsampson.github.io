@@ -1,3 +1,20 @@
+a[href*="tags/C++"]
+{
+  background-color: blue;
+}
+a[href*="tags/C#"]
+{
+  background-color: navy;
+}
+a[href*="tags/nodejs"]
+{
+  background-color: green;
+}
+a[href*="tags/npm"]
+{
+  background-color: green;
+}
+
 :root {
   --red: #C5004A;
   --darkred: #7F0036;
@@ -36,7 +53,9 @@ footer {
 p:last-child {
   margin-bottom: 0;
 }
-
+h2 {
+  color: var(--darkred);
+}
 p,
 .tmpl-post li {
   line-height: 1.45;
