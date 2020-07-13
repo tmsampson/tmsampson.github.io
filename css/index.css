@@ -14,6 +14,10 @@ a[href*="tags/npm"]
 {
   background-color: green;
 }
+a[href*="tags/secret"]
+{
+  background-color: black;
+}
 
 :root {
   --red: #C5004A;
