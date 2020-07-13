@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tags
+Disallow: /posts/combine-lists
+Disallow: /posts/dead-particle
+Disallow: /posts/pill-poppers-predicament

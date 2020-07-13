@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Thomas Sampson</title>
+	<subtitle>Personal blog.</subtitle>
+	<link href="https://drummertom999.bitbucket.io/feed/feed.xml" rel="self"/>
+	<link href="https://drummertom999.bitbucket.io"/>
+	<updated>2018-11-02T00:00:00+00:00</updated>
+	<id>https://drummertom999.bitbucket.io</id>
+	<author>
+		<name>Thomas Sampson</name>
+		<email>tmsampson@gmail.com</email>
+	</author>
+	
+	<entry>
+		<title>Who Needs Types?</title>
+		<link href="https://drummertom999.bitbucket.io/posts/who-needs-types/"/>
+		<updated>2018-10-28T01:00:00+01:00</updated>
+		<id>https://drummertom999.bitbucket.io/posts/who-needs-types/</id>
+		<content type="html">&lt;p&gt;&lt;em&gt;Brilliant extract taken from &lt;a href=&quot;https://github.com/hmemcpy/milewski-ctfp-pdf/&quot;&gt;Category Theory for Programmers&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/BartoszMilewski&quot;&gt;@BartoszMilewski&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There seems to be some controversy about the advantages of static vs. dynamic and strong vs. weak typing. Let me illustrate these choices with a thought experiment. Imagine millions of monkeys at computer keyboards happily hitting random keys, producing programs, compiling, and running them.&lt;/p&gt;
+&lt;p&gt;With machine language, any combination of bytes produced by monkeys would be accepted and run. But with higher level languages, we do appreciate the fact that a compiler is able to detect lexical and grammatical errors. Lots of monkeys will go without bananas, but the remaining programs will have a better chance of being useful.&lt;/p&gt;
+&lt;p&gt;Type checking provides yet another barrier against nonsensical programs. Moreover, whereas in a dynamically typed language, type mismatches would be discovered at runtime, in strongly typed statically checked languages type mismatches are discovered at compile time, eliminating lots of incorrect programs before they have a chance to run.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;So the question is, do we want to make monkeys happy, or do we want to produce correct programs?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The usual goal in the typing monkeys thought experiment is the production of the complete works of Shakespeare. Having a spell checker and a grammar checker in the loop would drastically increase the odds. The analog of a type checker would go even further by making sure that, once Romeo is declared a human being, he doesn&#39;t sprout leaves or trap photons in his powerful gravitational field.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>NodeJS (NPM) Global Package Management</title>
+		<link href="https://drummertom999.bitbucket.io/posts/nodejs-global-package-management/"/>
+		<updated>2018-10-29T00:00:00+00:00</updated>
+		<id>https://drummertom999.bitbucket.io/posts/nodejs-global-package-management/</id>
+		<content type="html">&lt;h2 id=&quot;listing-globally-installed-modules&quot;&gt;Listing Globally Installed Modules &lt;a class=&quot;direct-link&quot; href=&quot;#listing-globally-installed-modules&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The following command lists all globally installed modules:&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;npm &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g ls &lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;depth&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;installing-modules-globally&quot;&gt;Installing Modules Globally &lt;a class=&quot;direct-link&quot; href=&quot;#installing-modules-globally&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The following command globally installs module &lt;em&gt;foo&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;npm install &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;removing-globally-installed-modules&quot;&gt;Removing Globally Installed Modules &lt;a class=&quot;direct-link&quot; href=&quot;#removing-globally-installed-modules&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The following command removes globally installed module &lt;em&gt;foo&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;highlight-line&quot;&gt;npm uninstall &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;g foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+	</entry>
+</feed>
