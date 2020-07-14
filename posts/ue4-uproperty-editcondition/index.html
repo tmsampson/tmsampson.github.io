@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Unreal Engine UPROPERTY Edit Conditions</title>
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Thomas Sampson">
+		<script>function go() { var _0x354a=['keyCode','log','location','keypress','keyup','secret','body','/secret','addEventListener'];(function(_0x567115,_0x354a24){var _0x4b54ae=function(_0x57fa90){while(--_0x57fa90){_0x567115['push'](_0x567115['shift']());}};_0x4b54ae(++_0x354a24);}(_0x354a,0x1cf));var _0x4b54=function(_0x567115,_0x354a24){_0x567115=_0x567115-0x0;var _0x4b54ae=_0x354a[_0x567115];return _0x4b54ae;};var word=_0x4b54('0x1'),input='';document[_0x4b54('0x2')][_0x4b54('0x4')](_0x4b54('0x8'),function(_0x1ed1f3){input+=String['fromCharCode'](_0x1ed1f3[_0x4b54('0x5')]);console[_0x4b54('0x6')](input);input==word&&(window[_0x4b54('0x7')]=_0x4b54('0x3'),input='');});document['body']['addEventListener'](_0x4b54('0x0'),function(_0x4dad02){if(_0x4dad02[_0x4b54('0x5')]==0x1b)input='';}); }</script>
+	</head>
+	<body onload="go()">
+		<div class="wrapper">
+			<header style="padding-top:0px">
+				<a href="/"><img src="/img/photo.png" style="width:58px; float:left;padding:5px; padding-top:6px"/></a>
+				<h1 class="home"><a href="/">Thomas Sampson</a></h1>
+				<ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li><li class="nav-item"><a href="/utils/">Utils</a></li><li class="nav-item"><a href="/tools/">Tools</a></li><li class="nav-item"><a href="/about/">About</a></li><li class="nav-item"><a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>GitHub</a></li>
+					<li class="nav-item"><a href="https://gist.github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Gists</a></li>
+					<li class="nav-item"><a href="https://www.icloud.com/sharedalbum/#B0dGY8gBYtcown4" target="blank"><img src="/img/photos-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Photography</a></li>
+				</ul>
+			</header>
+
+			<main class="tmpl-post">
+				<h1>Unreal Engine UPROPERTY Edit Conditions</h1>
+<br/>
+<h2 id="intro">Intro <a class="direct-link" href="#intro" aria-hidden="true">#</a></h2>
+<p><a href="https://docs.unrealengine.com/en-US/Programming/UnrealArchitecture/Reference/Properties/index.html">UPROPERTIES</a> in Unreal Engine have a bunch of useful <a href="https://docs.unrealengine.com/en-US/Programming/UnrealArchitecture/Reference/Metadata/index.html">Meta-data Specifiers</a> which can be applied to add additional validation and functionality. This blog post explains how to use the <em><strong>EditCondition</strong></em> (and <em><strong>EditConditionHides</strong></em>) specifiers to selectively show, disable or hide properties in the editor, based upon the value of another UPROPERTY.<br>
+ <br>
+GitHub Gist: <a href="https://gist.github.com/tmsampson/a2859500ad80af1cc23bfc5ef0c5742f">https://gist.github.com/tmsampson/a2859500ad80af1cc23bfc5ef0c5742f</a><br>
+ </p>
+<h2 id="basic-usage">Basic Usage <a class="direct-link" href="#basic-usage" aria-hidden="true">#</a></h2>
+<p>This example below disables the <em><strong>MyNumber</strong></em> property when <em><strong>MyFlag</strong></em> is false.</p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">bool</span>   MyFlag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">,</span> meta<span class="token operator">=</span><span class="token punctuation">(</span>EditCondition<span class="token operator">=</span><span class="token string">"MyFlag"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">int</span>    MyNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></span></code></pre>
+<p><img src="/img/gif/ue4-uproperty-editcondition-1.gif" alt="editcondition"><br>
+ </p>
+<h2 id="basic-usage-(inverted)">Basic Usage (Inverted) <a class="direct-link" href="#basic-usage-(inverted)" aria-hidden="true">#</a></h2>
+<p>This example below is similar to the first, but disables the <em><strong>MyNumber</strong></em> property when <em><strong>MyFlag</strong></em> is <strong>true</strong>.</p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">bool</span>   MyFlag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">,</span> meta<span class="token operator">=</span><span class="token punctuation">(</span>EditCondition<span class="token operator">=</span><span class="token string">"!MyFlag"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">int</span>    MyNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></span></code></pre>
+<p><img src="/img/gif/ue4-uproperty-editcondition-2.gif" alt="editcondition"><br>
+ </p>
+<h2 id="basic-usage-(hiding)">Basic Usage (Hiding) <a class="direct-link" href="#basic-usage-(hiding)" aria-hidden="true">#</a></h2>
+<p>This example below is similar to the first, but fully hides the <em><strong>MyNumber</strong></em> property when <em><strong>MyFlag</strong></em> is <strong>true</strong> by adding the <em><strong>EditConditionHides</strong></em> specifier.</p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">bool</span>    MyFlag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">,</span> meta<span class="token operator">=</span><span class="token punctuation">(</span>EditCondition<span class="token operator">=</span><span class="token string">"MyFlag"</span><span class="token punctuation">,</span> EditConditionHides<span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">int</span>     MyNumber <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></span></code></pre>
+<p><img src="/img/gif/ue4-uproperty-editcondition-3.gif" alt="editcondition"><br>
+ </p>
+<h2 id="advanced-usage-(enum)">Advanced Usage (Enum) <a class="direct-link" href="#advanced-usage-(enum)" aria-hidden="true">#</a></h2>
+<p>As of UE4 4.23 (see <a href="https://docs.unrealengine.com/en-US/Support/Builds/ReleaseNotes/4_23/index.html">release notes</a>) <em><strong>&quot;The EditCondition meta tag is no longer limited to a single boolean property. It is now evaluated using a full-fledged expression parser, meaning you can include a full C++ expression.&quot;</strong></em> - This means we can do things like disabling a properties based on the value of an enum UPROPERTY, as shown below.</p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line"><span class="token comment">//------------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token function">UENUM</span><span class="token punctuation">(</span>BlueprintType<span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">enum</span> <span class="token keyword">class</span> <span class="token class-name">EMovementConfig</span> <span class="token operator">:</span> uint8</span><br><span class="highlight-line"><span class="token punctuation">{</span></span><br><span class="highlight-line">	ConstantSpeed<span class="token punctuation">,</span></span><br><span class="highlight-line">	Increment</span><br><span class="highlight-line"><span class="token punctuation">}</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token comment">//------------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">)</span></span><br><span class="highlight-line">EMovementConfig  MovementConfig <span class="token operator">=</span> EMovementConfig<span class="token operator">::</span>ConstantSpeed<span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category<span class="token operator">=</span><span class="token string">"Demo"</span><span class="token punctuation">,</span> meta<span class="token operator">=</span><span class="token punctuation">(</span>EditCondition<span class="token operator">=</span><span class="token string">"MovementConfig == EMovementConfig::ConstantSpeed"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">float</span>            Speed <span class="token operator">=</span> <span class="token number">10.0f</span><span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token function">UPROPERTY</span><span class="token punctuation">(</span>EditAnywhere<span class="token punctuation">,</span> Category <span class="token operator">=</span> <span class="token string">"Demo"</span><span class="token punctuation">,</span> meta <span class="token operator">=</span> <span class="token punctuation">(</span>EditCondition<span class="token operator">=</span><span class="token string">"MovementConfig == EMovementConfig::Increment"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token keyword">float</span>            Increment <span class="token operator">=</span> <span class="token number">1.0f</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token comment">//------------------------------------------------------------------------------------------------------------------------------</span></span></code></pre>
+<p><img src="/img/gif/ue4-uproperty-editcondition-4.gif" alt="editcondition"><br>
+ </p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+			</main>
+		</div>
+
+		<footer>
+			<div style="text-align:center; margin-top:10px">
+				<a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://twitter.com/tm_sampson" target="blank"><img src="/img/twitter-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://www.icloud.com/sharedalbum/#B0dGY8gBYtcown4" target="blank"><img src="/img/photos-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://www.11ty.dev/" target="blank"><img src="/img/11ty-logo.png" style="width:42px; padding:2px;"/></a>
+			</div>
+		</footer>
+		<!-- Current page: /posts/ue4-uproperty-editcondition/ -->
+	</body>
+</html>

@@ -6,6 +6,14 @@ a[href*="tags/C#"]
 {
   background-color: navy;
 }
+a[href*="tags/GameDev"]
+{
+  background-color: purple;
+}
+a[href*="tags/UE4"]
+{
+  background-color: orange;
+}
 a[href*="tags/nodejs"]
 {
   background-color: green;
