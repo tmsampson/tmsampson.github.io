@@ -26,6 +26,10 @@ a[href*="tags/secret"]
 {
   background-color: black;
 }
+a[href*="tags/performance"]
+{
+  background-color: orangered;
+}
 
 :root {
   --red: #C5004A;

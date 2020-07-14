@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>C++ High Resolution Timer</title>
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Thomas Sampson">
+		<script>function go() { var _0x354a=['keyCode','log','location','keypress','keyup','secret','body','/secret','addEventListener'];(function(_0x567115,_0x354a24){var _0x4b54ae=function(_0x57fa90){while(--_0x57fa90){_0x567115['push'](_0x567115['shift']());}};_0x4b54ae(++_0x354a24);}(_0x354a,0x1cf));var _0x4b54=function(_0x567115,_0x354a24){_0x567115=_0x567115-0x0;var _0x4b54ae=_0x354a[_0x567115];return _0x4b54ae;};var word=_0x4b54('0x1'),input='';document[_0x4b54('0x2')][_0x4b54('0x4')](_0x4b54('0x8'),function(_0x1ed1f3){input+=String['fromCharCode'](_0x1ed1f3[_0x4b54('0x5')]);console[_0x4b54('0x6')](input);input==word&&(window[_0x4b54('0x7')]=_0x4b54('0x3'),input='');});document['body']['addEventListener'](_0x4b54('0x0'),function(_0x4dad02){if(_0x4dad02[_0x4b54('0x5')]==0x1b)input='';}); }</script>
+		
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172655969-1"></script>
+		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-172655969-1');</script>
+
+	</head>
+	<body onload="go()">
+		<div class="wrapper">
+			<header style="padding-top:0px">
+				<a href="/"><img src="/img/photo.png" style="width:58px; float:left;padding:5px; padding-top:6px"/></a>
+				<h1 class="home"><a href="/">Thomas Sampson</a></h1>
+				<ul class="nav"><li class="nav-item"><a href="/">Home</a></li><li class="nav-item"><a href="/posts/">Archive</a></li><li class="nav-item"><a href="/utils/">Utils</a></li><li class="nav-item"><a href="/tools/">Tools</a></li><li class="nav-item"><a href="/about/">About</a></li><li class="nav-item"><a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>GitHub</a></li>
+					<li class="nav-item"><a href="https://gist.github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Gists</a></li>
+					<li class="nav-item"><a href="https://www.icloud.com/sharedalbum/#B0dGY8gBYtcown4" target="blank"><img src="/img/photos-logo.png" style="width:16px; padding:2px; position:relative; top:2px"/>Photography</a></li>
+				</ul>
+			</header>
+
+			<main class="tmpl-post">
+				<h1>C++ High Resolution Timer</h1>
+<br/>
+<h2 id="intro">Intro <a class="direct-link" href="#intro" aria-hidden="true">#</a></h2>
+<p>Some basic code to perform high-resolution performance measurements in C++ using the <a href="http://www.cplusplus.com/reference/chrono/">&lt;chrono&gt;</a> library.<br>
+ </p>
+<h2 id="code">Code <a class="direct-link" href="#code" aria-hidden="true">#</a></h2>
+<p>GitHub Gist: <a href="https://git.io/JJ3xz">https://git.io/JJ3xz</a></p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line"><span class="token comment">//------------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span></span><br><span class="highlight-line"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;chrono></span></span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token comment">//------------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><br><span class="highlight-line"><span class="token punctuation">{</span></span><br><span class="highlight-line">    <span class="token comment">// Start timer</span></span><br><span class="highlight-line">    <span class="token keyword">auto</span> start <span class="token operator">=</span> std<span class="token operator">::</span>chrono<span class="token operator">::</span>high_resolution_clock<span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">    <span class="token comment">//--------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line">    <span class="token comment">// [YOUR CODE HERE]</span></span><br><span class="highlight-line">    <span class="token comment">//--------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="highlight-line"></span><br><span class="highlight-line">    <span class="token comment">// Stop timer</span></span><br><span class="highlight-line">    <span class="token keyword">auto</span> end <span class="token operator">=</span> std<span class="token operator">::</span>chrono<span class="token operator">::</span>high_resolution_clock<span class="token operator">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line">    <span class="token keyword">auto</span> duration <span class="token operator">=</span> <span class="token punctuation">(</span>end <span class="token operator">-</span> start<span class="token punctuation">)</span><span class="token punctuation">;</span></span><br><span class="highlight-line">    <span class="token keyword">auto</span> us <span class="token operator">=</span> std<span class="token operator">::</span>chrono<span class="token operator">::</span>duration_cast<span class="token operator">&lt;</span>std<span class="token operator">::</span>chrono<span class="token operator">::</span>microseconds<span class="token operator">></span><span class="token punctuation">(</span>duration<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Microsecond (as int)</span></span><br><span class="highlight-line">    <span class="token keyword">auto</span> ms <span class="token operator">=</span> std<span class="token operator">::</span>chrono<span class="token operator">::</span>duration_cast<span class="token operator">&lt;</span>std<span class="token operator">::</span>chrono<span class="token operator">::</span>milliseconds<span class="token operator">></span><span class="token punctuation">(</span>duration<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Milliseconds (as int)</span></span><br><span class="highlight-line">    <span class="token keyword">const</span> <span class="token keyword">float</span> ms_fractional <span class="token operator">=</span> <span class="token keyword">static_cast</span><span class="token operator">&lt;</span><span class="token keyword">float</span><span class="token operator">></span><span class="token punctuation">(</span>us<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">1000</span><span class="token punctuation">;</span>         <span class="token comment">// Milliseconds (as float)</span></span><br><span class="highlight-line">    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Duration = "</span> <span class="token operator">&lt;&lt;</span> us<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"µs ("</span> <span class="token operator">&lt;&lt;</span> ms_fractional <span class="token operator">&lt;&lt;</span> <span class="token string">"ms)"</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span></span><br><span class="highlight-line"><span class="token punctuation">}</span></span><br><span class="highlight-line"></span><br><span class="highlight-line"><span class="token comment">//-------------------------------------------------------</span></span></code></pre>
+
+<br/>
+<br/>
+<br/>
+<br/>
+			</main>
+		</div>
+
+		<footer>
+			<div style="text-align:center; margin-top:10px">
+				<a href="https://github.com/tmsampson" target="blank"><img src="/img/github-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://twitter.com/tm_sampson" target="blank"><img src="/img/twitter-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://www.icloud.com/sharedalbum/#B0dGY8gBYtcown4" target="blank"><img src="/img/photos-logo.png" style="width:42px; padding:2px;"/></a>
+				<a href="https://www.11ty.dev/" target="blank"><img src="/img/11ty-logo.png" style="width:42px; padding:2px;"/></a>
+			</div>
+		</footer>
+		<!-- Current page: /posts/cpp-high-resolution-timer/ -->
+	</body>
+</html>
