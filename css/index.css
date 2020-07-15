@@ -56,10 +56,11 @@ body {
 }
 .wrapper {
   min-height: 100%;
-  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
   margin: 0 auto -64px; /* the bottom margin is the negative value of the footer's height */
   background-image:url("../img/bg.png");
+  display: flex;
+  flex-direction: column;
 }
 footer {
   height: 64px;
@@ -219,6 +220,15 @@ pre {
   font-weight: 700;
 }
 
+.noselect
+{
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
 
 /* Tags */
 .tag {
