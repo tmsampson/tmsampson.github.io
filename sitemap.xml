@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://drummertom999.bitbucket.io/tags/nodejs/</loc>
+    <loc>https://drummertom999.bitbucket.io/tags/C++/</loc>
     <lastmod>2020-07-13</lastmod>
   </url>
   
@@ -93,6 +93,11 @@
   
   <url>
     <loc>https://drummertom999.bitbucket.io/demos/</loc>
+    <lastmod>2020-07-15</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drummertom999.bitbucket.io/demos/interpolation/</loc>
     <lastmod>2020-07-15</lastmod>
   </url>
 </urlset>
