@@ -62,6 +62,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+.util-demo-wrapper
+{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.util-demo-iframe
+{
+  background-color:transparent;
+  width: 100%;
+  margin-top:10px;
+  overflow:hidden;
+  flex-grow:1;
+}
 footer {
   height: 64px;
   border-top: 1px dashed var(--lightgray);
@@ -128,7 +142,6 @@ pre {
   text-decoration: none; /* override del, ins, mark defaults */
   color: inherit; /* override del, ins, mark defaults */
 }
-
 /* allow highlighting empty lines */
 .highlight-line:empty:before {
   content: " ";
