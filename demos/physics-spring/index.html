@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Who Needs Types?</title>
+		<title>Physics Spring</title>
 		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Thomas Sampson">
@@ -26,26 +26,25 @@
 			</header>
 
 			<main class="tmpl-post">
-				<h1>Who Needs Types?</h1>
-<br/>
-<h2 id="an-extract...">An Extract... <a class="direct-link" href="#an-extract..." aria-hidden="true">#</a></h2>
-<p> </p>
-<p><em>Brilliant extract taken from <a href="https://github.com/hmemcpy/milewski-ctfp-pdf/">Category Theory for Programmers</a> by <a href="https://twitter.com/BartoszMilewski">@BartoszMilewski</a></em><br>
- </p>
-<p>There seems to be some controversy about the advantages of static vs. dynamic and strong vs. weak typing. Let me illustrate these choices with a thought experiment. Imagine millions of monkeys at computer keyboards happily hitting random keys, producing programs, compiling, and running them.<br>
- </p>
-<p>With machine language, any combination of bytes produced by monkeys would be accepted and run. But with higher level languages, we do appreciate the fact that a compiler is able to detect lexical and grammatical errors. Lots of monkeys will go without bananas, but the remaining programs will have a better chance of being useful.<br>
- </p>
-<p>Type checking provides yet another barrier against nonsensical programs. Moreover, whereas in a dynamically typed language, type mismatches would be discovered at runtime, in strongly typed statically checked languages type mismatches are discovered at compile time, eliminating lots of incorrect programs before they have a chance to run.<br>
- </p>
-<p><strong>So the question is, do we want to make monkeys happy, or do we want to produce correct programs?</strong></p>
-<p> <br>
-The usual goal in the typing monkeys thought experiment is the production of the complete works of Shakespeare. Having a spell checker and a grammar checker in the loop would drastically increase the odds. The analog of a type checker would go even further by making sure that, once Romeo is declared a human being, he doesn't sprout leaves or trap photons in his powerful gravitational field.</p>
+				
+<!-- ******************************************************************** -->
+<!-- Hack to activate "Demo" option in navbar when on /demo/* sub pages -->
+<!-- ******************************************************************** -->
+<!-- NOTE: Style copied from "nav-item-active" css class
+<!-- ******************************************************************** -->
+<style>
+.nav a[href*="demo"]
+{
+	font-weight: 700;
+	text-decoration: underline !important;
+}
+</style>
+<!-- ******************************************************************** -->
+<!-- ******************************************************************** -->
 
-<br/>
-<br/>
-<br/>
-<br/>
+<h2 style="margin-bottom:6px">Physics Spring</h1>
+<b>Page</b>: <a href="https://thomassampson.co.uk/tmsampson.github.io.content/demos/physics-spring.html" target="blank">https://thomassampson.co.uk/tmsampson.github.io.content/demos/physics-spring.html</a><b style="margin-left:20px">Source</b>: <a href="https://github.com/tmsampson/tmsampson.github.io.content/blob/master/demos/physics-spring.html" target="blank">https://github.com/tmsampson/tmsampson.github.io.content/blob/master/demos/physics-spring.html</a>
+<iframe src="https://thomassampson.co.uk/tmsampson.github.io.content/demos/physics-spring.html" frameBorder="0" allowTransparency="true" scrolling="no" style="background-color:transparent; width: 100%; height:700px; margin-top:10px; margin-botton:100px; overflow:hidden;" ></iframe>
 			</main>
 		</div>
 
@@ -57,6 +56,6 @@ The usual goal in the typing monkeys thought experiment is the production of the
 				<a href="https://www.11ty.dev/" target="blank"><img src="/img/11ty-logo.png" style="width:42px; padding:2px;"/></a>
 			</div>
 		</footer>
-		<!-- Current page: /posts/who-needs-types/ -->
+		<!-- Current page: /demos/physics-spring/ -->
 	</body>
 </html>
