@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://drummertom999.bitbucket.io/tags/category-theory/</loc>
+    <loc>https://drummertom999.bitbucket.io/tags/C++/</loc>
     <lastmod>2020-07-13</lastmod>
   </url>
   
@@ -84,5 +84,10 @@
   <url>
     <loc>https://drummertom999.bitbucket.io/tools/</loc>
     <lastmod>2020-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drummertom999.bitbucket.io/utils/interpolation/</loc>
+    <lastmod>2020-07-15</lastmod>
   </url>
 </urlset>
