@@ -1,18 +1,22 @@
 a[href*="tags/C++"]
 {
-  background-color: blue;
+  background-color: rgb(37, 192, 212);
 }
 a[href*="tags/C#"]
 {
-  background-color: navy;
+  background-color: rgb(29, 100, 117);
 }
-a[href*="tags/GameDev"]
+a[href*="tags/gamedev"]
 {
   background-color: purple;
 }
-a[href*="tags/UE4"]
+a[href*="tags/ue4"]
 {
   background-color: orange;
+}
+a[href*="tags/blueprint"]
+{
+  background-color: rgb(0, 110, 255);
 }
 a[href*="tags/nodejs"]
 {
