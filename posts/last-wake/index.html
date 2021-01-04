@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Interview Question - Combining Two Lists</title>
+		<title>Why Am I Awake?</title>
 		<link rel="stylesheet" href="/css/index.css">
 		<link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Thomas Sampson">
@@ -26,32 +26,16 @@
 			</header>
 
 			<main class="tmpl-post" style="overflow-y: auto; flex-grow: 1;">
-				<h1>Interview Question - Combining Two Lists</h1>
+				<h1>Why Am I Awake?</h1>
 <br/>
-<h2 id="overview">Overview <a class="direct-link" href="#overview">#</a></h2>
-<p>You are presented with two lists of integer numbers with the following properties:</p>
-<ol>
-<li>The numbers are not in sequence</li>
-<li>The numbers in each list are unique</li>
-<li>Duplicates may exist between the two lists<br>
- </li>
-</ol>
-<h2 id="example-lists">Example lists <a class="direct-link" href="#example-lists">#</a></h2>
-<pre class="language-javascript"><code class="language-javascript"><span class="highlight-line"><span class="token constant">A</span><span class="token operator">:</span> <span class="token number">15321</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">575</span><span class="token punctuation">,</span> <span class="token number">38098</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">...</span></span><br><span class="highlight-line"><span class="token constant">B</span><span class="token operator">:</span> <span class="token number">17</span><span class="token punctuation">,</span> <span class="token number">357</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">689</span><span class="token punctuation">,</span> <span class="token number">555</span><span class="token punctuation">,</span> <span class="token operator">...</span></span></code></pre>
+<h2 id="intro">Intro <a class="direct-link" href="#intro">#</a></h2>
+<p>Ever found your computer switched on and awake, after previously leaving it in a suspended/sleeping state? The <a href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options">powercfg</a> command can be used to help shed some light on what device or event last caused your PC to come alive.<br>
+ </p>
+<p><strong>Command</strong></p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line">powercfg <span class="token operator">/</span>lastwake</span></code></pre>
 <p> </p>
-<h2 id="question">Question <a class="direct-link" href="#question">#</a></h2>
-<p>Describe an algorithm to combine the two lists such that:</p>
-<ol>
-<li>All unique numbers from both lists are contained within the result</li>
-<li>The result contains only 1 instance of any duplicates</li>
-</ol>
-<p>Where appropriate we ask you to take into account that:</p>
-<ul>
-<li>The lists may be very large</li>
-<li>The algorithm may be executing in a realtime context</li>
-<li>The hardware executing the code may be limited</li>
-</ul>
-<p>You are encouraged to think out loud and show working - we are interested in your process as much as the result.</p>
+<p><strong>Command Output (Example)</strong></p>
+<pre class="language-cpp"><code class="language-cpp"><span class="highlight-line">Wake History Count <span class="token operator">-</span> <span class="token number">1</span></span><br><span class="highlight-line">Wake History <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></span><br><span class="highlight-line">  Wake Source Count <span class="token operator">-</span> <span class="token number">1</span></span><br><span class="highlight-line">  Wake Source <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span></span><br><span class="highlight-line">    Type<span class="token operator">:</span> Device</span><br><span class="highlight-line">    Instance Path<span class="token operator">:</span> PCI\VEN_1022<span class="token operator">&amp;</span>DEV_1483<span class="token operator">&amp;</span>SUBSYS_87C01043<span class="token operator">&amp;</span>REV_00\<span class="token number">3</span><span class="token operator">&amp;</span><span class="token number">11583659</span><span class="token operator">&amp;</span><span class="token number">0</span><span class="token operator">&amp;</span><span class="token number">19</span></span><br><span class="highlight-line">    Friendly Name<span class="token operator">:</span></span><br><span class="highlight-line">    Description<span class="token operator">:</span> PCI<span class="token operator">-</span>to<span class="token operator">-</span>PCI Bridge</span><br><span class="highlight-line">    Manufacturer<span class="token operator">:</span> <span class="token punctuation">(</span>Standard system devices<span class="token punctuation">)</span></span></code></pre>
 
 <br/>
 <br/>
@@ -67,7 +51,7 @@
 					<a href="https://www.11ty.dev/" target="blank"><img src="/img/11ty-logo.png" style="width:42px; padding:2px;"/></a>
 				</div>
 			</footer>
-			<!-- Current page: /posts/combine-lists/ -->
+			<!-- Current page: /posts/last-wake/ -->
 		</div>
 	</body>
 </html>

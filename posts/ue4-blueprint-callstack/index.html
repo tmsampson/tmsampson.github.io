@@ -28,7 +28,7 @@
 			<main class="tmpl-post" style="overflow-y: auto; flex-grow: 1;">
 				<h1>Debugging Unreal Engine Blueprint Callstacks From Visual Studio</h1>
 <br/>
-<h2 id="intro">Intro <a class="direct-link" href="#intro" aria-hidden="true">#</a></h2>
+<h2 id="intro">Intro <a class="direct-link" href="#intro">#</a></h2>
 <p>When debugging in <a href="https://www.unrealengine.com">Unreal Engine</a>, sometimes you hit a C++ breakpoint and realise that part of your callstack originates from the <a href="https://docs.unrealengine.com/en-US/Engine/Blueprints/TechnicalGuide/Compiler/index.html">Blueprint VM</a>, deep within the bowels of the engine. This suggests that you've arrived here via some Blueprint logic, which called a <a href="https://docs.unrealengine.com/en-US/Programming/UnrealArchitecture/Reference/Functions/index.html">UFUNCTION</a> or broadcast a <a href="https://docs.unrealengine.com/en-US/Programming/UnrealArchitecture/Delegates/index.html">Delegate</a> callback at some point along the way. Althgouth it's possible to do so manually, it can be quite tedious to manually unwind the Blueprint VM callstack. Luckily there's a handy command you can execute from the <a href="https://docs.microsoft.com/en-us/visualstudio/ide/reference/immediate-window?view=vs-2019">Immediate Window</a> in Visual Studio, which will print out the entire callstack with proper blueprint function/symbol names included. Examples below:<br>
  <br>
 GitHub Gist: <a href="https://git.io/JJCLc">https://git.io/JJCLc</a><br>

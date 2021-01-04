@@ -32,46 +32,6 @@
   </url>
   
   <url>
-    <loc>https://thomassampson.co.uk/posts/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/tags/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/tags/C++/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/about/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/utils/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/utils/img-swizzle/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thomassampson.co.uk/secret/</loc>
-    <lastmod>2020-07-13</lastmod>
-  </url>
-  
-  <url>
     <loc>https://thomassampson.co.uk/posts/cpp-high-resolution-timer/</loc>
     <lastmod>2020-07-14</lastmod>
   </url>
@@ -82,27 +42,72 @@
   </url>
   
   <url>
-    <loc>https://thomassampson.co.uk/tools/</loc>
-    <lastmod>2020-07-14</lastmod>
+    <loc>https://thomassampson.co.uk/posts/ue4-blueprint-callstack/</loc>
+    <lastmod>2020-07-20</lastmod>
   </url>
   
   <url>
-    <loc>https://thomassampson.co.uk/demos/physics-spring/</loc>
-    <lastmod>2020-07-15</lastmod>
+    <loc>https://thomassampson.co.uk/about/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/posts/</loc>
+    <lastmod>2020-08-14</lastmod>
   </url>
   
   <url>
     <loc>https://thomassampson.co.uk/demos/</loc>
-    <lastmod>2020-07-15</lastmod>
+    <lastmod>2020-08-14</lastmod>
   </url>
   
   <url>
     <loc>https://thomassampson.co.uk/demos/interpolation/</loc>
-    <lastmod>2020-07-15</lastmod>
+    <lastmod>2020-08-14</lastmod>
   </url>
   
   <url>
-    <loc>https://thomassampson.co.uk/posts/ue4-blueprint-callstack/</loc>
-    <lastmod>2020-07-20</lastmod>
+    <loc>https://thomassampson.co.uk/demos/physics-spring/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/secret/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/tags/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/tags/C++/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/tools/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/utils/img-swizzle/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/utils/</loc>
+    <lastmod>2020-08-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thomassampson.co.uk/posts/last-wake/</loc>
+    <lastmod>2021-01-04</lastmod>
   </url>
 </urlset>

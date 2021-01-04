@@ -30,6 +30,10 @@ a[href*="tags/secret"]
 {
   background-color: black;
 }
+a[href*="tags/commandline"]
+{
+  background-color: rgb(37, 37, 37);
+}
 a[href*="tags/performance"]
 {
   background-color: orangered;
